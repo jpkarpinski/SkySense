@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>SkySense</title>
+    
+    <!-- Ícone da página -->
+    <link rel="icon" href="./img/sol.png"  type="image/png">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css" />
+    
+    <!-- Scripts -->
+    <script src="js/scripts.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form">
+        <!-- Título da página -->
+        <h1 id="titulo">SkySense <img id="sol-2" src="/img/sol 2.png"></img></h1>
+        <h3>Verifique o clima da cidade desejada:</h3>
+        <div class="form-input-container">
+          <!-- Campo de entrada da cidade -->
+          <input type="text" placeholder="Digite o nome da cidade" id="city-input"/>
+          <!-- Botão de pesquisa -->
+          <button id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+      <div id="weather-data" class="hide">
+        <!-- Dados do clima -->
+        <h2><i class="fa-solid fa-location-dot"></i> <span id="city"></span> <img id="country"></img></h2>
+        <p id="temperature"><span></span>&deg;C</p>
+        <div id="description-container">
+          <p id="description"></p>
+          <img id="weather-icon" src="" alt="Condições atuais">
+        </div>
+        <div id="details-container">
+          <p id="humidity">
+            <i class="fa-solid fa-droplet"></i> 
+            <span></span>
+          </p>
+          <p id="wind">
+            <i class="fa-solid fa-wind"></i>
+            <span></span>
+          </p>
+        </div>
+      </div>
+      <div id="error-message" class="hide">
+        <!-- Mensagem de erro -->
+        <p>Não foi possível encontrar o clima de uma cidade com este nome.</p>
+      </div>
+      <div id="loader" class="hide">
+        <!-- Loader de carregamento -->
+        <i class="fa-solid fa-spinner"></i>
+      </div>
+      <div id="suggestions">
+        <h3 id="h3-sug">Cidades sugeridas:ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</h3>
+        <!-- Botões de sugestões de cidades -->
+        <button id="curitiba">Curitiba</button>
+        <button id="new york">New York</button>
+        <button id="zurique">Zurique</button>
+        <button id="vancouver">Vancouver</button>
+        <button id="genebra">Genebra</button>
+        <button id="las vegas">Las Vegas</button>
+        <button id="moscow">Moscow</button>
+        <button id="maceio">Maceió</button>
+      </div>
+    </div>
+  </body>
+</html>
+
